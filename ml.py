@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 
 
 train_data = [
-    ("hello", "greeting"),
+    ("hello", "greeting"), 
     ("hi", "greeting"),
     ("how are you?", "query"),
     ("what's your name?", "query"),
