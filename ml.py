@@ -18,7 +18,7 @@ lemmatizer = WordNetLemmatizer()
 vectorizer = TfidfVectorizer()
  
 X = [lemmatizer.lemmatize(text) for text, _ in train_data]
-y = [label for _, label in train_data]
+y = [label for _, label in train_data] 
 
 X = vectorizer.fit_transform(X)
 
