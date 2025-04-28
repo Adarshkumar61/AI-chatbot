@@ -16,7 +16,7 @@ train_data = [
 # Preprocess the data
 lemmatizer = WordNetLemmatizer()
 vectorizer = TfidfVectorizer()
-
+ 
 X = [lemmatizer.lemmatize(text) for text, _ in train_data]
 y = [label for _, label in train_data]
 
