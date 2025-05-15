@@ -2,7 +2,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB 
+from sklearn.naive_bayes import MultinomialNB  
 
 
 train_data = [
@@ -14,12 +14,12 @@ train_data = [
 ]
 
 # Preprocess the data
-lemmatizer = WordNetLemmatizer()
-vectorizer = TfidfVectorizer()
+lemmatizer = WordNetLemmatizer() 
  
 X = [lemmatizer.lemmatize(text) for text, _ in train_data]
 y = [label for _, label in train_data] 
 
+vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(X)
 
 # Split the data into training and testing sets
