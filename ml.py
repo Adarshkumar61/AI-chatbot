@@ -9,6 +9,7 @@ train_data = [
     ("hello", "greeting"), 
     ("hi", "greeting"),
     ("how are you?", "query"),
+    ("what are you doing?", "query")
     ("what's your name?", "query"),
     ("tell me a joke", "joke"),
 ]
