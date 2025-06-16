@@ -34,7 +34,7 @@ def respond(query):
     query = lemmatizer.lemmatize(query)
     query = vectorizer.transform([query])
     prediction = clf.predict(query)
-    return prediction[0]
+    return prediction[0] 
 
 # Test the chatbot
 print(respond("hello"))  
