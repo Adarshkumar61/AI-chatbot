@@ -32,7 +32,7 @@ clf.fit(X_train, y_train)
 # Define a function to respond to user queries
 def respond(query):
     query = lemmatizer.lemmatize(query)
-    query = vectorizer.transform([query])
+    query = vectorizer.transform([query]) 
     prediction = clf.predict(query)
     return prediction[0] 
 
