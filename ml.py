@@ -15,10 +15,10 @@ train_data = [
 ]
 
 # Preprocess the data
-lemmatizer = WordNetLemmatizer() 
+lemmatizer = WordNetLemmatizer()
  
 X = [lemmatizer.lemmatize(text) for text, _ in train_data]
-y = [label for _, label in train_data] 
+y = [label for _, label in train_data]
 
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(X)
@@ -28,16 +28,16 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # Train a Naive Bayes classifier
 clf = MultinomialNB() 
-clf.fit(X_train, y_train) 
+clf.fit(X_train, y_train)
 
 # Define a function to respond to user queries
 def respond(query):
     query = lemmatizer.lemmatize(query)
-    query = vectorizer.transform([query]) 
+    query = vectorizer.transform([query])
     prediction = clf.predict(query)
-    return prediction[0] 
+    return prediction[0]
 
 # Test the chatbot
-print(respond("hello"))  
+print(respond("hello"))
 print(respond("how are you?"))
 print(respond("tell me a joke"))
