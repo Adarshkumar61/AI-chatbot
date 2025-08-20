@@ -46,7 +46,7 @@ id2label = {v:k for k,v in label2id.items()}
 y = np.array([label2id[l] for l in labels])
 
 # 2) Tokenize + pad
-tokenizer = Tokenizer(oov_token="<OOV>")
+tokenizer = Tokenizer(oov_token="<OOV>") 
 tokenizer.fit_on_texts(texts)
 X_seq = tokenizer.texts_to_sequences(texts)
 max_len = max(len(s) for s in X_seq)
